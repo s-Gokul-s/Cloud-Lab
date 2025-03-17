@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        input, button { margin: 5px; padding: 10px; width: 220px; }
+        button { cursor: pointer; background: #31ade2; color: white; border: none; border-radius: 15px; }
+        button:hover { background: #31ade2; }
+        pre { background: #f4f4f4; padding: 15px; border-radius: 5px; white-space: pre-wrap; word-wrap: break-word; }
+        .container { max-width: 400px; margin: auto; text-align: center; }
+        .input-group { display: flex; flex-direction: column; align-items: center; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>FastAPI</h1>
+
+        <div class="input-group">
+            <label for="itemId">ID:</label>
+            <input type="number" id="itemId" >
+
+            <label for="itemName">Name:</label>
+            <input type="text" id="itemName" >
+
+            <label for="itemDesc">Description:</label>
+            <input type="text" id="itemDesc" >
+        </div>
+
+        <div style="margin: 20px 0;">
+            <button onclick="createItem()">Create</button>
+            <button onclick="getItems()">Read All</button>
+            <button onclick="updateItem()">Update</button>
+            <button onclick="patchItem()">Patch</button>
+            <button onclick="deleteItem()">Delete</button>
+        </div>
+
+        <h3>Response:</h3>
+        <pre id="output">Response</pre>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
